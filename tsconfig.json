@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "baseUrl": "./src",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "sourceMap": true,
+    "resolveJsonModule": true
+  }
+}

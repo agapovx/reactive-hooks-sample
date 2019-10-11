@@ -1,0 +1,35 @@
+{
+	"name": "reactive-hackernews",
+	"version": "1.0.0",
+	"description": "HackerNews sample tests for rxjs streams",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run server:dev",
+		"server:dev": "webpack-dev-server --mode development --config webpack.config.js --progress --color",
+		"build:dev": "webpack --mode development --config webpack.config.js --progress --color",
+		"build:prod": "webpack --mode production --config webpack.config.js --progress --color",
+		"bundleanalyze": "npm run build:prod -- --env.config=analyze"
+	},
+	"author": "Ilya Agapov",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.0",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"rxjs": "^6.5.3",
+		"styled-components": "^4.4.0"
+	},
+	"devDependencies": {
+		"@types/react": "^16.9.5",
+		"@types/react-dom": "^16.9.1",
+		"clean-webpack-plugin": "^2.0.1",
+		"html-webpack-plugin": "^3.2.0",
+		"ts-loader": "^6.2.0",
+		"typescript": "^3.6.3",
+		"webpack": "^4.41.0",
+		"webpack-bundle-analyzer": "^3.5.2",
+		"webpack-cli": "^3.3.9",
+		"webpack-dev-server": "^3.8.2",
+		"webpack-merge": "^4.2.2"
+	}
+}
