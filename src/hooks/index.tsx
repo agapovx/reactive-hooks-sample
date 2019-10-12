@@ -9,10 +9,19 @@ interface StoryState {
 	pages: number[];
 }
 
+/**
+ * @template T - тип данных потока
+ * @param source$ Поток, на который нужно подписаться
+ * @param nextFn Колбэк, который вызовется при получении новых данных из потока
+ */
 function onEmit<T>(source$: Observable<T>, nextFn: (value: T) => void): Subscription {
 	return source$.subscribe(nextFn, (err) => console.error(`Stream error: ${err}`));
 }
-
+/**
+ * Кастомный хук, который сокрывает в себе логику подписки и управления потоками
+ * @param {IStoryService} StoryService Класс, содержащий в себе функционал для работы с потоками stories
+ * @returns {[StoryState, (number) => void]} стэйт с актуальными stories, пагинацией и колбэк для смены страницы
+ */
 export function useStoriesFacade(StoryService: IStoryService): [StoryState, (number) => void] {
 	const setPage = (pageNumber: number) => {
 		setState((state) => {

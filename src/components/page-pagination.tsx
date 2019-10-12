@@ -6,7 +6,9 @@ interface PagePaginationProps {
 	setCurrentPage: (pageNumber: number) => void;
 	avaliablePages: number[];
 }
-
+/**
+ *  Компонент для рендера страниц пагинации
+ */
 const PagePagination: React.FunctionComponent<PagePaginationProps> = ({
 	currentPage,
 	setCurrentPage,
@@ -34,6 +36,9 @@ interface IPaginationButtonProps {
 	setPage: (number) => void;
 }
 
+/**
+ * Мемоизированный компонент для рендера кнопки-страницы пагинации
+ */
 const PaginationButton = memo<IPaginationButtonProps>(({ isDisabled, pageNumber, setPage }) => {
 	const setPageNumber = () => setPage(pageNumber);
 	return (

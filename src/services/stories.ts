@@ -28,7 +28,13 @@ export interface IStoryService {
 	avaliablePages$: Observable<number[]>;
 	stories$: Observable<Story[]>;
 }
-
+/**
+ * Класс, хранящий в себе потоки актуального списка stories, страниц для пагинации
+ * и функционал для управления потоками
+ * @export
+ * @class StoryServices
+ * @implements {IStoryService}
+ */
 export class StoryServices implements IStoryService {
 	private static instance: StoryServices;
 

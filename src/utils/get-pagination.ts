@@ -1,3 +1,9 @@
+/**
+ * Составляет номера страниц для пагинации
+ * @param current Текущий номер страницы
+ * @param totalPages Общее количество страниц
+ * @returns массив из актуальных номеров страниц
+ */
 export const getPagination = (current: number, totalPages: number): number[] => {
 	let list: number[] = [];
 	let pageLimit = 5;
