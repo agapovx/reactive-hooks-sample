@@ -46,7 +46,7 @@ export class StoryServices implements IStoryService {
 
 	public avaliablePages$: Observable<number[]>;
 
-	private _storiesCache: { [key: number]: Observable<Story> } = {};
+	private _storiesCache: Map<number, Observable<Story>> = new Map();
 	public stories$: Observable<Story[]>;
 
 	static get sharedInstace(): StoryServices {
